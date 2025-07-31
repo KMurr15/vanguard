@@ -2,7 +2,7 @@
 
 /* IMPORTED FONTS*/
 /* IMPORT "INTER" FROM GOOGLE FONTS" */
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -70,8 +70,11 @@ table {
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 body {
     min-width: 400px;
+    width: 100%;
     font-family: var(--font);
     font-size: 1em;
+    line-height: 1.5;
+    color: var(--white)
 }
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
@@ -79,6 +82,81 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+header, footer {
+    background-color: var(--black);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--blue);
+    padding: 1rem 0 1rem 5rem;
+}
+
+/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+h1::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+}
+
+nav {
+    background-color: var(--black);
+}
+
+nav h2 {
+    visibility: hidden;
+    height: 0px;
+}
+
+nav ul {
+    overflow: hidden;
+    text-align: center;
+    max-height: 0;
+}
+
+input[type=checkbox] {
+    appearance: none;
+}
+
+label span {
+    background-color: var(--white);
+    display: block;
+    width: 2rem;
+    height: 0.25rem;
+    position: relative;
+    left: 100px;
+}
+
+input:checked ~ ul {
+    max-height: 400px;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: bold;
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
@@ -92,14 +170,13 @@ body {
     overflow: hidden;
 }
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
-h1::before {
-    content: "";
-    position: absolute;
-    left: -.5rem;
-    width: 3.75rem;
-    height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+#offers section {
+    background-color: var(--blue);
+    border-radius: 5px;
+}
+
+#results {
+    background-color: var(--blue);
 }
 
 /* THIS ONE IS DONE FOR YOU */
