@@ -92,9 +92,10 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 0 0 10px 6px var(--blue);
+    box-shadow: 0 6px 10px var(--blue);
     position: relative;
     z-index: 2;
+    padding: 1rem;
 }
 
 h1 {
@@ -142,8 +143,8 @@ label span {
     width: 2rem;
     height: 0.25rem;
     position: relative;
-    left: 100px;
-    top: 12px;
+    left: 150px;
+    top: 15px;
 }
 
 label span::before, label span::after {
@@ -172,9 +173,15 @@ nav li a {
     display: block;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: bold;
     font-size: 1.5em;
+    color: var(--blue);
     padding: 1rem;
+}
 
+nav li a:hover {
+    background-color: var(--blue);
+    color: var(--black);
 }
 
 h2 {
@@ -197,6 +204,25 @@ h3 {
     padding: 1rem;
     overflow: hidden;
 }
+
+.container:first-child {
+    padding: 10px;
+    backdrop-filter: blur(10px);
+}
+
+#innov-invest a {
+    background-color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#innov-invest p:nth-child(2) {
+    margin: 1rem 0 2rem;
+} 
 
 #offers section {
     background-color: var(--blue);
