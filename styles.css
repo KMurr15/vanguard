@@ -92,13 +92,17 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-} 
+    box-shadow: 0 0 10px 6px var(--blue);
+    position: relative;
+    z-index: 2;
+}
 
 h1 {
     font-size: 2em;
     font-weight: bold;
     color: var(--blue);
     padding: 1rem 0 1rem 5rem;
+    margin: auto 0;
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
@@ -121,9 +125,11 @@ nav h2 {
 }
 
 nav ul {
+    list-style: none;
     overflow: hidden;
     text-align: center;
     max-height: 0;
+    padding: 0;
 }
 
 input[type=checkbox] {
@@ -137,16 +143,38 @@ label span {
     height: 0.25rem;
     position: relative;
     left: 100px;
+    top: 12px;
+}
+
+label span::before, label span::after {
+    background-color: var(--white);
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 0.25rem;
+    position: absolute;
+}
+
+label span::before {
+    top: -1rem;
+}
+
+label span::after {
+    top: 1rem;
 }
 
 input:checked ~ ul {
     max-height: 400px;
+    padding-top: 50px;
 }
 
 nav li a {
     display: block;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 1rem;
+
 }
 
 h2 {
