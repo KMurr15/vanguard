@@ -120,11 +120,6 @@ nav {
     background-color: var(--black);
 }
 
-nav h2 {
-    visibility: hidden;
-    height: 0px;
-}
-
 nav ul {
     list-style: none;
     overflow: hidden;
@@ -185,13 +180,21 @@ nav li a:hover {
 }
 
 h2 {
-    font-size: 1.75em;
+    font-size: 2em;
     font-weight: bold;
+    margin: 1rem;
+}
+
+nav h2 {
+    visibility: hidden;
+    height: 0px;
+    margin: 0;
 }
 
 h3 {
-    font-size: 1.25em;
+    font-size: 1.4em;
     font-weight: bold;
+    padding: 1rem;
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
@@ -210,6 +213,11 @@ h3 {
     backdrop-filter: blur(10px);
 }
 
+
+#innov-invest p:nth-child(2) {
+    margin: 1rem 0 2rem;
+} 
+
 #innov-invest a {
     background-color: var(--blue);
     text-decoration: none;
@@ -220,17 +228,52 @@ h3 {
     border-radius: 8px;
 }
 
-#innov-invest p:nth-child(2) {
-    margin: 1rem 0 2rem;
-} 
+#innov-invest a:hover {
+    background-color: var(--red);
+}
+
+#expertise {
+    color: var(--black);
+}
+
+#offers h2 {
+    color: var(--black);
+}
 
 #offers section {
     background-color: var(--blue);
-    border-radius: 5px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+#offers {
+    padding-bottom: 5rem;
 }
 
 #results {
     background-color: var(--blue);
+    padding: 0 1rem 0.5rem;
+}
+
+#results  h3{
+    font-size: 1.75em;
+}
+
+table {
+    background-color: var(--black);
+    width: 100%;
+    margin: 1rem 0;
+}
+
+tr:nth-child(odd) td {
+    background-color: var(--charcoal);
+}
+
+th, td {
+    border: 1px solid var(--charcoal);
+    text-align: center;
+    padding: 1rem;
 }
 
 /* THIS ONE IS DONE FOR YOU */
