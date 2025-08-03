@@ -110,10 +110,18 @@ h1 {
 h1::before {
     content: "";
     position: absolute;
+    top: 1.2rem;
     left: 1rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    animation: idle 10s ease-in-out infinite normal;
+}
+
+@keyframes idle {
+    0%   {transform: translate(0, 0px);}
+    50%   {transform: translate(0, 15px);}
+    100%   {transform: translate(0, 0px);}
 }
 
 nav {
@@ -172,6 +180,7 @@ nav li a {
     font-size: 1.5em;
     color: var(--blue);
     padding: 1rem;
+    transition: all 500ms ease-in-out;
 }
 
 nav li a:hover {
@@ -222,7 +231,7 @@ h3 {
 
 
 #innov-invest p:nth-child(2) {
-    margin: 1rem 0 2rem;
+    margin: 1rem 0 1.8rem;
 } 
 
 #innov-invest a {
@@ -231,12 +240,10 @@ h3 {
     font-weight: bold;
     font-size: 1.25em;
     color: var(--white);
+    display: inline-block;
     padding: 1rem;
     border-radius: 8px;
-}
-
-#innov-invest a:hover {
-    background-color: var(--red);
+    transition: all 300ms ease-in-out;
 }
 
 #expertise {
@@ -252,6 +259,11 @@ h3 {
     border-radius: 8px;
     margin-top: 1rem;
     padding: 1rem;
+    transition: all 400ms ease-in-out;
+}
+
+#offers section:hover {
+    transform: translate(0, -12px);
 }
 
 #offers {
@@ -369,10 +381,12 @@ textarea {
     border: none;
     padding: 1rem;
     margin: 1rem 0;
+    transition: all 300ms ease-in-out;
 }
 
-#user-submit:hover {
+#user-submit:hover, #innov-invest a:hover {
     background-color: var(--red);
+    transform: scale(1.05);
 }
 
 address {
