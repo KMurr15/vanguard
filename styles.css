@@ -364,6 +364,10 @@ textarea {
     margin: 1rem 0;
 }
 
+#user-submit:hover {
+    background-color: var(--red);
+}
+
 address {
     text-align: center;
     font-size: 0.8em;
