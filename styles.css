@@ -110,17 +110,16 @@ h1 {
 h1::before {
     content: "";
     position: absolute;
-    top: 1.2rem;
     left: 1rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
-    animation: idle 10s ease-in-out infinite normal;
+    animation: idle 10s ease-in-out 200ms infinite normal;
 }
 
 @keyframes idle {
     0%   {transform: translate(0, 0px);}
-    50%   {transform: translate(0, 15px);}
+    50%   {transform: translate(0, 10px);}
     100%   {transform: translate(0, 0px);}
 }
 
@@ -399,22 +398,23 @@ address a {
 }
 
 /* MEDIA QUERIES (MEDIUM) */ 
+@media screen and (min-width: 800px) {
+    #results .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-#results {
-    grid-template-columns: 1fr 1fr;
-}
+    #results section:first-child {
+        grid-column: 1/3;
+    }
 
-.results-container {
-    flex-direction: row;
-    justify-content: space-between;
-}
+    .results-table {
+        width: 50%;
+    }
 
-.results-table {
-    width: 50%;
-}
-
-.bar-chart {
-    width: 50%;
+    .bar-chart {
+        width: 50%;
+    }
 }
 
 /* MEDIA QUERIES (LARGE) */
