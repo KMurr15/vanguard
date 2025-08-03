@@ -183,6 +183,7 @@ h2 {
     font-size: 2em;
     font-weight: bold;
     margin: 1rem;
+    animation: appear 1.5s ease 300ms 1 normal;
 }
 
 nav h2 {
@@ -195,6 +196,12 @@ h3 {
     font-size: 1.4em;
     font-weight: bold;
     padding: 1rem;
+    animation: appear 1.5s ease 300ms 1 normal;
+}
+
+@keyframes appear {
+    0%   {transform: translate(0, -40px); opacity: 0;}
+    100% {transform: translate(0, 0); opacity: 100;}
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
