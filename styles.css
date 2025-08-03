@@ -147,6 +147,7 @@ label span {
     position: absolute;
     right: 60px;
     top: 50px;
+    cursor: pointer;
 }
 
 label span::before, label span::after {
@@ -399,6 +400,19 @@ address a {
 
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width: 800px) {
+    nav ul {
+        max-height: 100px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: -10px;
+    }
+
+    label span {
+        opacity: 0;
+        z-index: -5;
+    }
+
     #results .container{
         display: grid;
         grid-template-columns: 1fr 1fr;
